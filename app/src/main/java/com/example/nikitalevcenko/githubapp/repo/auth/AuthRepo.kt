@@ -4,4 +4,6 @@ import io.reactivex.Completable
 
 interface AuthRepo {
     fun login(login: String, password: String): Completable
+
+    val isAuthorized: Boolean
 }
