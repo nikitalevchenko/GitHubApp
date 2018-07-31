@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">GitHubApp</string>
+    <string name="app_name">GitHub App</string>
+
+
+    <!--Auth-->
+    <string name="title_activity_auth">Log in</string>
+    <string name="login_hint">Login</string>
+    <string name="log_in">Log In</string>
+    <string name="password_hint">Password</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="ok">Ok</string>
+    <string name="login_is_empty">Login is empty</string>
+    <string name="password_is_empty">Password is empty</string>
+    <string name="no_iternet_connection">Network connection error</string>
+    <string name="bad_credentials">Bad credentials</string>
 </resources>
