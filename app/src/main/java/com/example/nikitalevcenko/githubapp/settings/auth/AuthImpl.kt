@@ -10,6 +10,10 @@ class AuthImpl(context: Context) : Auth {
 
     private val sharedPreferences = context.getSharedPreferences(SETTINGS_NAME, Context.MODE_PRIVATE)
 
+    override val hasAccessToken: Boolean
+        get() = sharedPreferences.contains(ACCESS_TOKEN)
+
+
     override var id: Long
         get() = sharedPreferences.getLong(ACCESS_TOKEN, 0)
         set(value) {

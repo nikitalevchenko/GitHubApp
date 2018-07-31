@@ -7,6 +7,10 @@ import io.reactivex.Completable
 import okhttp3.Credentials
 
 class AuthRepoImpl(private val api: Api, private val settings: Settings) : AuthRepo {
+
+    override val isAuthorized: Boolean
+        get() = settings.auth.hasAccessToken
+
     override fun login(login: String, password: String): Completable {
         val credentials = Credentials.basic(login, password)
 

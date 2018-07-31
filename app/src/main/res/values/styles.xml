@@ -34,4 +34,8 @@
     <style name="AppTheme.ErrorTextAppearance" parent="TextAppearance.Design.Error">
         <item name="android:textColor">@color/colorError</item>
     </style>
+
+    <style name="AppTheme.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="colorPrimary">@color/colorAccent</item>
+    </style>
 </resources>

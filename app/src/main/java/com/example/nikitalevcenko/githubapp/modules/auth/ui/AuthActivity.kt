@@ -1,14 +1,16 @@
 package com.example.nikitalevcenko.githubapp.modules.auth.ui
 
+import android.content.Intent
 import android.os.Bundle
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.example.nikitalevcenko.githubapp.R
-import com.example.nikitalevcenko.githubapp.modules.auth.presentation.AuthPresenter
-import com.example.nikitalevcenko.githubapp.modules.auth.view.AuthView
 import com.example.nikitalevcenko.githubapp.base.ui.ActivityBase
 import com.example.nikitalevcenko.githubapp.base.ui.KeyboardUtil
 import com.example.nikitalevcenko.githubapp.base.ui.addTextChangedListener
 import com.example.nikitalevcenko.githubapp.base.ui.setVisibility
+import com.example.nikitalevcenko.githubapp.modules.auth.presentation.AuthPresenter
+import com.example.nikitalevcenko.githubapp.modules.auth.view.AuthView
+import com.example.nikitalevcenko.githubapp.modules.main.ui.MainActivity
 import kotlinx.android.synthetic.main.activity_auth.*
 
 
@@ -61,6 +63,7 @@ class AuthActivity : ActivityBase(), AuthView {
     }
 
     override fun navigateToMainScreen() {
-        // TODO
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 }

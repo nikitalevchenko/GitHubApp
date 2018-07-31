@@ -19,6 +19,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AuthTheme"
             android:windowSoftInputMode="adjustResize">
+
+        </activity>
+        <activity
+            android:name=".modules.main.ui.MainActivity"
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -2,6 +2,8 @@ package com.example.nikitalevcenko.githubapp
 
 import com.example.nikitalevcenko.githubapp.modules.auth.di.AuthComponent
 import com.example.nikitalevcenko.githubapp.modules.auth.di.AuthModule
+import com.example.nikitalevcenko.githubapp.modules.main.di.MainComponent
+import com.example.nikitalevcenko.githubapp.modules.main.di.MainModule
 import dagger.Component
 import javax.inject.Singleton
 
@@ -12,4 +14,6 @@ interface AppComponent {
 
     // Subcomponents
     fun plus(module: AuthModule): AuthComponent
+
+    fun plus(module: MainModule): MainComponent
 }
