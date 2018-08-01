@@ -18,18 +18,21 @@
             android:label="@string/title_activity_auth"
             android:screenOrientation="portrait"
             android:theme="@style/AuthTheme"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity
             android:name=".modules.main.ui.MainActivity"
-            android:label="@string/title_activity_main">
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".modules.accounts.ui.AccountsActivity"
+            android:label="@string/title_activity_accounts"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,11 @@
 package com.example.nikitalevcenko.githubapp
 
+import android.arch.persistence.room.Room
 import android.content.Context
 import android.support.annotation.NonNull
 import com.example.nikitalevcenko.githubapp.api.Api
 import com.example.nikitalevcenko.githubapp.api.BASE_URL
+import com.example.nikitalevcenko.githubapp.db.DB
 import com.example.nikitalevcenko.githubapp.repo.auth.AuthRepo
 import com.example.nikitalevcenko.githubapp.repo.auth.AuthRepoImpl
 import com.example.nikitalevcenko.githubapp.settings.Settings
@@ -42,9 +44,16 @@ class AppModule(private val appContext: Context) {
         override val auth = AuthImpl(context)
     }
 
+    @Provides
+    @NonNull
+    @Singleton
+    fun db(context: Context): DB {
+        return Room.databaseBuilder(context, DB::class.java, "database.db").build()
+    }
+
     // Repos
     @Provides
     @NonNull
     @Singleton
-    fun authRepo(api: Api, settings: Settings): AuthRepo = AuthRepoImpl(api, settings)
+    fun authRepo(api: Api, settings: Settings, db: DB): AuthRepo = AuthRepoImpl(api, settings, db)
 }

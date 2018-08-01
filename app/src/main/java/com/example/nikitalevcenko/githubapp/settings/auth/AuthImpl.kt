@@ -4,28 +4,18 @@ import android.content.Context
 
 private const val SETTINGS_NAME = "github_app_settings"
 
-private const val ACCESS_TOKEN = "ACCESS_TOKEN"
+private const val IS_AUTHORIZED = "IS_AUTHORIZED"
 
 class AuthImpl(context: Context) : Auth {
 
     private val sharedPreferences = context.getSharedPreferences(SETTINGS_NAME, Context.MODE_PRIVATE)
 
-    override val hasAccessToken: Boolean
-        get() = sharedPreferences.contains(ACCESS_TOKEN)
-
-
-    override var id: Long
-        get() = sharedPreferences.getLong(ACCESS_TOKEN, 0)
+    override var isAuthorized: Boolean
+        get() = sharedPreferences.getBoolean(IS_AUTHORIZED, false)
         set(value) {
-            putLong(ACCESS_TOKEN, value)
+            putBoolean(IS_AUTHORIZED, value)
         }
 
-
-    override var accessToken: String
-        get() = sharedPreferences.getString(ACCESS_TOKEN, "")
-        set(value) {
-            putString(ACCESS_TOKEN, value)
-        }
 
     private fun putString(key: String, value: String) {
         sharedPreferences.edit()
@@ -36,6 +26,12 @@ class AuthImpl(context: Context) : Auth {
     private fun putLong(key: String, value: Long) {
         sharedPreferences.edit()
                 .putLong(key, value)
+                .apply()
+    }
+
+    private fun putBoolean(key: String, value: Boolean) {
+        sharedPreferences.edit()
+                .putBoolean(key, value)
                 .apply()
     }
 }
