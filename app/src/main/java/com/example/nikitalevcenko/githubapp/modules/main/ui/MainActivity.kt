@@ -7,10 +7,10 @@ import android.view.MenuItem
 import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.example.nikitalevcenko.githubapp.R
+import com.example.nikitalevcenko.githubapp.modules.accounts.ui.AccountsActivity
 import com.example.nikitalevcenko.githubapp.modules.auth.ui.AuthActivity
 import com.example.nikitalevcenko.githubapp.modules.main.presentation.MainPresenter
 import com.example.nikitalevcenko.githubapp.modules.main.view.MainView
-import com.example.nikitalevcenko.githubapp.modules.accounts.ui.AccountsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : MvpAppCompatActivity(), MainView {
