@@ -9,13 +9,13 @@
     <string name="password_hint">Password</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_report">Report</string>
-    <string name="title_settings">Settings</string>
+    <string name="action_settings">Settings</string>
     <string name="ok">Ok</string>
     <string name="login_is_empty">Login is empty</string>
     <string name="password_is_empty">Password is empty</string>
     <string name="no_iternet_connection">Network connection error</string>
     <string name="bad_credentials">Bad credentials</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Accounts-->
+    <string name="title_activity_accounts">Accounts</string>
 </resources>
